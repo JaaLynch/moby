@@ -24,11 +24,11 @@ RUN bash Miniconda3-latest-Linux-x86_64.sh -b
 RUN echo "source /home/moby/miniconda3/bin/activate" >> .zshrc
 
 # Get environment.yml
-#RUN git clone https://github.com/JaaLynch/moby.git
+RUN git clone https://github.com/JaaLynch/moby.git
 
 # Conda environment
-#RUN /home/moby/anaconda3/condabin/conda env create -f /home/moby/moby/environment.yml
-#RUN echo "conda activate env" >> .zshrc
+RUN /home/moby/miniconda3/condabin/conda env create -f /home/moby/moby/environment.yml
+RUN echo "conda activate env" >> .zshrc
 
 # Configure Git
 RUN echo "git config --global user.name 'jaalynch'" >> .zshrc
