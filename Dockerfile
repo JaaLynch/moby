@@ -21,6 +21,7 @@ RUN sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="fletcherm"/g' .zshrc
 # Install and configure anaconda
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 RUN bash Miniconda3-latest-Linux-x86_64.sh -b
+RUN rm Miniconda3-latest-Linux-x86_64.sh
 RUN echo "source /home/moby/miniconda3/bin/activate" >> .zshrc
 
 # Get environment.yml
